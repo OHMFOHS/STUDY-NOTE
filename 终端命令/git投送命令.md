@@ -7,3 +7,5 @@ git add .
 git commit -m "add all"
 
 git push
+
+![](C:\Users\MCJ\Desktop\STUDY-NOTE\终端命令\git投送命令.assets\HDY (1 - 1).JPG)
