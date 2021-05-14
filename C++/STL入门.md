@@ -10,9 +10,48 @@ for (vector<person>::iterator it = v.begin(); it != v.end(); it++)
 		cout << "姓名" << (*it).m_name << "年龄" << (*it).m_age << endl;
 		cout << "姓名" << it->m_name << "年龄" << it->m_age << endl;
 	}
-
-
 ```
+
+### 常用迭代器
+
+![image-20210514093012695](../assets/STL%E5%85%A5%E9%97%A8/image-20210514093012695.png)
+
+```c++
+//利用区间方式构造
+	vector<int>v2(v1.begin(), v1.end());
+//赋值
+vector<int>v3;
+v3.assign(v1.begin(),v1.end());
+
+//容量与大小
+empty();//判断是否为空
+capacity();//返回容量
+size();//返回容器中元素的个数
+resize(int num);//重新指定容器的长度为num，变长用默认值填充，变短删除
+resize(int num,elem);//重载版本，边长用elem填充
+
+//插入删除
+insert(const_iterator pos,ele);//迭代器指向位置插入ele
+insert(const_iterator pos,int count,ele);//迭代器指向位置插入count个ele
+clear()//清除所有
+erase(const_iterator pos);//删除元素
+
+//数据存取
+at(int idx);//v1.at(i);
+operator[];
+front();//返回第一个元素
+back();//返回最后一个元素
+
+//互换容器
+//用swap收缩内存
+vector<int>(v).swap(v);
+//利用匿名对象，当前行执行结束后系统自动回收
+
+//预留空间
+reserve(int len);//容器预留len个长度，但预留位置不可访问 
+```
+
+
 
 # string容器
 
@@ -31,7 +70,7 @@ string 类内部封装了很多成员方法
 
 string管理char*所分配的内存，不用担心复制越界和取值越界等，由类内部进行负责
 
-## 初始化方式
+### 初始化方式
 
 ```c++
 string(); //创建一个空的字符串 例如: string str;
@@ -42,7 +81,7 @@ string(const string& str); //使用一个string对象初始化另一个string对
 string(int n, char c); //使用n个字符c初始化
 ```
 
-## 赋值方式
+### 赋值方式
 
 ```c++
 //assin 方式
@@ -54,7 +93,7 @@ string str2;
 str2.assign("hello c++",5);
 ```
 
-## 字符串拼接
+### 字符串拼接
 
 ```c++
 //append
@@ -62,7 +101,7 @@ string str;
 str.append("abc");
 ```
 
-## 查找替换
+### 查找替换
 
 ```c++
 str.find("abc");//左往右找
@@ -74,14 +113,14 @@ str.rfind("abc")//右往左找
  str.replace(1,3,"1112311");
 ```
 
-## 字符串比较
+### 字符串比较
 
 ```c++
 str1.compare(str2);
 //逐个根据ascii码对比大小  相等返回0
 ```
 
-## 字符存取
+### 字符存取
 
 ```c++
 for(int i=0;i<str.size();i++)
@@ -91,7 +130,7 @@ for(int i=0;i<str.size();i++)
 }
 ```
 
-## 插入删除  字串获取
+### 插入删除  字串获取
 
 ```c++
 //插入删除
