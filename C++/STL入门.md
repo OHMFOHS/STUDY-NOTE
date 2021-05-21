@@ -150,5 +150,20 @@ string username = email.substr(0,pos);
 cout<<username<<endl;
 ```
 
+# deque容器（双端数组）
 
+### 特性
+
+1. 头部插入速度快
+2. vector访问元素速度较快
+
+![image-20210514152750717](../assets/STL%E5%85%A5%E9%97%A8/image-20210514152750717.png)
+
+```c++
+//只读迭代器
+void printdeque(const deque<int>&d)
+{                   //只读迭代器
+    for(deque<int>::const_iterator it=d.begin();it!=d.end();it++)
+}
+```
 
