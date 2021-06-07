@@ -527,12 +527,12 @@ int main() {
 
    ```C++
    int main() {
-
+   
    	char str1[] = "hello world";
    	cout << str1 << endl;
        
    	system("pause");
-
+   
    	return 0;
    }
    ```
@@ -545,17 +545,17 @@ int main() {
 
    ```C++
    int main() {
-
+   
    	string str = "hello world";
    	cout << str << endl;
    	
    	system("pause");
-
+   
    	return 0;
    }
    ```
 
-   ​
+   
 
 > 注意：C++风格字符串，需要加入头文件==#include\<string>==
 
@@ -1097,7 +1097,7 @@ if语句的三种形式
 
 * 多条件的if语句
 
-  ​
+  
 
 1. 单行格式if语句：`if(条件){ 条件满足执行的语句 }`
 
@@ -1107,30 +1107,30 @@ if语句的三种形式
 
    ```C++
    int main() {
-
+   
    	//选择结构-单行if语句
    	//输入一个分数，如果分数大于600分，视为考上一本大学，并在屏幕上打印
-
+   
    	int score = 0;
    	cout << "请输入一个分数：" << endl;
    	cin >> score;
-
+   
    	cout << "您输入的分数为： " << score << endl;
-
+   
    	//if语句
    	//注意事项，在if判断语句后面，不要加分号
    	if (score > 600)
    	{
    		cout << "我考上了一本大学！！！" << endl;
    	}
-
+   
    	system("pause");
-
+   
    	return 0;
    }
    ```
 
-   ​
+   
 
 
 > 注意：if条件表达式后不要加分号
@@ -1145,7 +1145,7 @@ if语句的三种形式
 
 ![img](assets/clip_image002-1541662519170.png)
 
-​
+
 
 示例：
 
@@ -1187,11 +1187,11 @@ int main() {
 
 ![img](assets/clip_image002-1541662566808.png)
 
-​
 
-​
 
-​
+
+
+
 
 示例：
 
@@ -1227,7 +1227,7 @@ int main() {
 }
 ```
 
-​
+
 
 
 
@@ -2730,7 +2730,7 @@ int main() {
 * 内存编号是从0开始记录的，一般用十六进制数字表示
 * 可以利用指针变量保存地址
 
-  ​
+  
 
 ### 7.2 指针变量的定义和使用
 
