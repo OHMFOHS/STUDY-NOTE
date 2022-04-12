@@ -30,3 +30,54 @@ print(list)
 
 
 ```
+
+```python
+#python处理excel
+import xlrd
+import xlwt
+from xlutils.copy import copy
+data_r=xlrd.open_workbook('maog.xlsx')
+table_r=data_r.sheet_by_index(0)
+wb=copy(data_r)
+sheet=wb.get_sheet(0)
+for i in range(4,991,1):
+        row_info=table_r.row_values(i)
+        pre_data=row_info[4]
+        num=len(pre_data.split(';'))
+        print(num)
+        if num==1:
+                sheet.write(i,8,"A.正确")
+                sheet.write(i,9,"B.错误")
+                print("完成")
+        elif num==4:
+                u1,u2,u3,u4=pre_data.split(';')
+                sheet.write(i,8,"A."+u1)
+                sheet.write(i,9,"B."+u2)
+                sheet.write(i,10,"C."+u3)
+                sheet.write(i,11,"D."+u4)
+                print("完成")
+        elif num==5:
+                u1,u2,u3,u4,u5=pre_data.split(';')
+                sheet.write(i,8,"A."+u1)
+                sheet.write(i,9,"B."+u2)
+                sheet.write(i,10,"C."+u3)
+                sheet.write(i,11,"D."+u4)
+                sheet.write(i,12,"E."+u5)
+                print("完成")
+        elif num==6:
+                u1,u2,u3,u4,u5,u6=pre_data.split(';')
+                sheet.write(i,8,"A."+u1)
+                sheet.write(i,9,"B."+u2)
+                sheet.write(i,10,"C."+u3)
+                sheet.write(i,11,"D."+u4)
+                sheet.write(i,12,"E."+u5)
+                sheet.write(i,13,"F."+u6)
+                print("完成")
+wb.save('maog.xls')
+print("保存成功")
+
+
+
+
+```
+
